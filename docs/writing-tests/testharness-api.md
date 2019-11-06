@@ -337,7 +337,7 @@ async_test(() => { /* test #2 waiting for "foo" event */ });
 A failing `assert_precondition` during setup is reported as a status of
 `PRECONDITION_FAILED` for the test, and the subtests will not run.
 
-See also the `.optional` [file name convention](file-names), which is
+See also the `.optional` [file name convention](file-names.md), which is
 appropriate when the precondition is explicitly optional behavior.
 
 ## Cleanup ##
