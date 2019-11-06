@@ -100,7 +100,7 @@ function createRecord(recordType, mediaType, data, encoding, lang) {
 }
 
 function createTextRecord(data, encoding, lang) {
-  return createRecord('text', 'text/plain', data, encoding, lang);
+  return createRecord('text', undefined, data, encoding, lang);
 }
 
 function createMimeRecordFromJson(json) {
@@ -114,14 +114,14 @@ function createMimeRecord(buffer) {
 }
 
 function createUnknownRecord(buffer) {
-  return createRecord('unknown', '', buffer);
+  return createRecord('unknown', undefined, buffer);
 }
 
 function createUrlRecord(url, isAbsUrl) {
   if (isAbsUrl) {
-    return createRecord('absolute-url', 'text/plain', url);
+    return createRecord('absolute-url', undefined, url);
   }
-  return createRecord('url', 'text/plain', url);
+  return createRecord('url', undefined, url);
 }
 
 function createNDEFPushOptions(target, timeout, ignoreRead) {
